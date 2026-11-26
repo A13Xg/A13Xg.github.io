@@ -1,6 +1,9 @@
 ---
-layout: page
-title: {{APP_NAME}} — Terms of Use
+title: Terms of Use
+head_title: {{APP_NAME}} — Terms of Use
+nav_title: Terms
+order: 2
+summary: The rules for using the app and its in-app purchases.
 permalink: /{{APP_SLUG}}/terms/
 ---
 

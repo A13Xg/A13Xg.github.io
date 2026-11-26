@@ -1,18 +1,8 @@
 ---
-layout: page
-title: App Documentation
-permalink: /
+layout: home
+title: A13Xg Industries
+head_title: A13Xg Industries — App Documentation
+description: Privacy policies, terms, and support information for apps and services published by A13Xg Industries.
 ---
 
-Privacy policies, terms of use, and support information for apps published by **A13Xg Industries**.
-
-## Apps
-
-### Magnet Swarm
-- [Privacy Policy](magnet-swarm/privacy/)
-- [Terms of Use](magnet-swarm/terms/)
-- [Support](magnet-swarm/support/)
-
----
-
-Contact: [AGoodman@A13Xg.com](mailto:AGoodman@A13Xg.com)
+Privacy policies, terms of use, and support information for apps and services published by **A13Xg Industries**. Choose one to see its documents.

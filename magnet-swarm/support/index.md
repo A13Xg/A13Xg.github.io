@@ -1,6 +1,9 @@
 ---
-layout: page
-title: Magnet Swarm — Support
+title: Support
+head_title: Magnet Swarm — Support
+nav_title: Support
+order: 3
+summary: How to get help, restore purchases, and contact us.
 permalink: /magnet-swarm/support/
 ---
 

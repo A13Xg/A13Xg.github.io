@@ -1,6 +1,9 @@
 ---
-layout: page
-title: Magnet Swarm — Privacy Policy
+title: Privacy Policy
+head_title: Magnet Swarm — Privacy Policy
+nav_title: Privacy
+order: 1
+summary: What the app collects, how ads and purchases work, and your choices.
 permalink: /magnet-swarm/privacy/
 ---
 

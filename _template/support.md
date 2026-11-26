@@ -1,6 +1,9 @@
 ---
-layout: page
-title: {{APP_NAME}} — Support
+title: Support
+head_title: {{APP_NAME}} — Support
+nav_title: Support
+order: 3
+summary: How to get help, restore purchases, and contact us.
 permalink: /{{APP_SLUG}}/support/
 ---
 

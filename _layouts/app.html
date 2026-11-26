@@ -1,0 +1,12 @@
+---
+layout: base
+---
+{%- include section.html %}
+<h1>{{ page.title }}</h1>
+{{ content }}
+<h2>Documents</h2>
+<ul class="toc">
+  {%- for doc in section_docs %}
+  <li><a href="{{ doc.url }}">{{ doc.title }}</a>{% if doc.summary %} — {{ doc.summary }}{% endif %}</li>
+  {%- endfor %}
+</ul>

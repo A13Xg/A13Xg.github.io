@@ -1,0 +1,13 @@
+{%- if page.layout == "home" -%}
+<span class="brand">{{ site.title }}</span>
+{%- else -%}
+{%- include section.html -%}
+<a class="brand" href="{{ section_url }}">{{ section_home.title }}</a>
+{%- if section_docs.size > 0 %}
+<nav class="doc-nav" aria-label="{{ section_home.title }} documents">
+  {%- for doc in section_docs %}
+  <a href="{{ doc.url }}"{% if doc.url == page.url %} aria-current="page"{% endif %}>{{ doc.nav_title | default: doc.title }}</a>
+  {%- endfor %}
+</nav>
+{%- endif -%}
+{%- endif -%}

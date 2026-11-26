@@ -1,7 +1,15 @@
-title: A13Xg Industries — App Documentation
-description: Privacy policies, terms, and support information for apps published by A13Xg Industries.
-theme: minima
+title: A13Xg Industries
+description: Privacy policies, terms, and support information for apps and services published by A13Xg Industries.
+contact_email: AGoodman@A13Xg.com
 markdown: kramdown
 exclude:
   - README.md
   - _template/
+
+# Every page is a scoped document unless it says otherwise. App/service
+# home pages use `layout: app`; the site root uses `layout: home`.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: doc

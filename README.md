@@ -10,12 +10,30 @@ Central home for public app documentation from **A13Xg Industries**: privacy pol
 |---|---|---|---|
 | Magnet Swarm | [privacy](https://a13xg.github.io/magnet-swarm/privacy/) | [terms](https://a13xg.github.io/magnet-swarm/terms/) | [support](https://a13xg.github.io/magnet-swarm/support/) |
 
-## Adding a new app
+## Site structure
 
-1. Copy `_template/` to a new folder named after the app's slug (e.g. `my-new-app/`).
-2. Replace every `{{APP_NAME}}`, `{{APP_SLUG}}` and `{{EFFECTIVE_DATE}}` placeholder, and edit the data sections to match what the app actually collects.
-3. Add the app to `index.md` and to the table above.
-4. Commit and push. GitHub Pages republishes in about a minute.
+- **`/`** is the main index. It lists every app and service, built automatically from pages with `layout: app`.
+- **`/<slug>/`** is an app or service home with a short intro and a table of contents of its documents.
+- **`/<slug>/<doc>/`** is one document.
+
+Each app's pages are scoped to that app. Their header shows only the app's name and links to its own documents. They never link to the main index or to other apps. Scoping comes from the first URL segment (`_includes/section.html`), so a new app needs no configuration beyond its folder.
+
+| Path | Purpose |
+|---|---|
+| `_layouts/home.html` | Main index |
+| `_layouts/app.html` | App/service home + table of contents |
+| `_layouts/doc.html` | Single document (default for every page) |
+| `_includes/header.html` | Scoped header and document nav |
+| `assets/site.css` | Styles (light and dark) |
+
+Document front matter: `title` (page heading), `head_title` (browser tab, include the app name), `nav_title` (short header label), `order` (position in nav/TOC), `summary` (TOC blurb), `permalink`.
+
+## Adding a new app or service
+
+1. Copy `_template/` to a folder named after the slug (e.g. `my-new-app/`). Move each `privacy.md`/`terms.md`/`support.md` into `<doc>/index.md` if you like, since the permalink decides the URL either way.
+2. Replace every `{{APP_NAME}}`, `{{APP_SLUG}}`, `{{EFFECTIVE_DATE}}`, `{{ONE_LINE_DESCRIPTION}}` and `{{SHORT_INTRO}}` placeholder, and edit the data sections to match what the app actually collects. Delete any document that doesn't apply, or add new ones with the same front matter.
+3. Add the app to the table above.
+4. Commit and push. GitHub Pages republishes in about a minute. The main index picks the app up automatically.
 
 Use the resulting URLs in App Store Connect:
 - **Privacy Policy URL** → `https://a13xg.github.io/<slug>/privacy/`

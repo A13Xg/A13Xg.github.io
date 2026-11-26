@@ -1,6 +1,9 @@
 ---
-layout: page
-title: Magnet Swarm — Terms of Use
+title: Terms of Use
+head_title: Magnet Swarm — Terms of Use
+nav_title: Terms
+order: 2
+summary: The rules for using the app and its in-app purchases.
 permalink: /magnet-swarm/terms/
 ---
 

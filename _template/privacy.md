@@ -1,6 +1,9 @@
 ---
-layout: page
-title: {{APP_NAME}} — Privacy Policy
+title: Privacy Policy
+head_title: {{APP_NAME}} — Privacy Policy
+nav_title: Privacy
+order: 1
+summary: What the app collects, how ads and purchases work, and your choices.
 permalink: /{{APP_SLUG}}/privacy/
 ---
 

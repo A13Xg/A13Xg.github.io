@@ -1,0 +1,4 @@
+{%- assign section_slug = page.url | split: "/" | slice: 1 | first -%}
+{%- assign section_url = "/" | append: section_slug | append: "/" -%}
+{%- assign section_home = site.pages | where: "url", section_url | first -%}
+{%- assign section_docs = site.pages | where: "layout", "doc" | where_exp: "p", "p.url contains section_url" | sort: "order" -%}
