@@ -87,7 +87,7 @@ a:hover { text-decoration-thickness: 2px; }
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 .doc-nav a:hover { color: var(--fg); }
-.doc-nav a[aria-current="page"] { color: var(--fg); background: var(--surface); box-shadow: var(--shadow); }
+.doc-nav a[aria-current="page"] { color: var(--fg); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* Hero */
 main { padding-block: 3rem 4rem; }
