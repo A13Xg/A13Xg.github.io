@@ -1,11 +1,24 @@
 ---
 layout: base
 ---
-<h1>{{ page.title }}</h1>
-{{ content }}
+<section class="hero">
+  <p class="eyebrow">Documentation</p>
+  <h1>{{ page.title }}</h1>
+  <div class="lede">{{ content }}</div>
+</section>
 {%- assign sections = site.pages | where: "layout", "app" | sort: "title" %}
 <ul class="cards">
   {%- for s in sections %}
-  <li><a href="{{ s.url }}"><strong>{{ s.title }}</strong>{% if s.description %}<span>{{ s.description }}</span>{% endif %}</a></li>
+  <li>
+    <a class="card" href="{{ s.url }}"{% if s.accent %} style="--card-accent: {{ s.accent }}; --card-accent-dark: {{ s.accent_dark | default: s.accent }}"{% endif %}>
+      {% include mark.html icon=s.icon title=s.title size="lg" %}
+      <span class="card-body">
+        <strong>{{ s.title }}</strong>
+        {%- if s.description %}<span class="card-desc">{{ s.description }}</span>{% endif %}
+        {%- if s.platforms %}<span class="chip">{{ s.platforms }}</span>{% endif %}
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </li>
   {%- endfor %}
 </ul>

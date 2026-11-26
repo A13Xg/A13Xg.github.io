@@ -2,11 +2,25 @@
 layout: base
 ---
 {%- include section.html %}
-<h1>{{ page.title }}</h1>
-{{ content }}
-<h2>Documents</h2>
-<ul class="toc">
+<section class="hero hero-app">
+  {% include mark.html icon=page.icon title=page.title size="xl" %}
+  <div>
+    {%- if page.platforms %}<p class="eyebrow">{{ page.platforms }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    <div class="lede">{{ content }}</div>
+  </div>
+</section>
+<h2 class="section-label">Documents</h2>
+<ul class="cards cards-compact">
   {%- for doc in section_docs %}
-  <li><a href="{{ doc.url }}">{{ doc.title }}</a>{% if doc.summary %} — {{ doc.summary }}{% endif %}</li>
+  <li>
+    <a class="card" href="{{ doc.url }}">
+      <span class="card-body">
+        <strong>{{ doc.title }}</strong>
+        {%- if doc.summary %}<span class="card-desc">{{ doc.summary }}</span>{% endif %}
+      </span>
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </li>
   {%- endfor %}
 </ul>

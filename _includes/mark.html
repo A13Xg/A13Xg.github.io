@@ -1,0 +1,5 @@
+{%- if include.icon -%}
+<img class="mark{% if include.size %} mark-{{ include.size }}{% endif %}" src="{{ include.icon }}" alt="" width="64" height="64">
+{%- else -%}
+<span class="mark mark-mono{% if include.size %} mark-{{ include.size }}{% endif %}" aria-hidden="true">{{ include.title | slice: 0 }}</span>
+{%- endif -%}

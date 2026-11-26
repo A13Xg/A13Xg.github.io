@@ -1,7 +1,13 @@
 ---
 layout: base
 ---
-<article>
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+{%- include section.html %}
+<article class="doc">
+  <header class="doc-head">
+    <p class="eyebrow">{{ section_home.title }}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
 </article>
