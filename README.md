@@ -31,4 +31,4 @@ Current entries:
 
 ## Legacy URLs
 
-Magnet Swarm v1.0 shipped with `https://a13xg.github.io/App-Documentation/...` links. The old [A13Xg/App-Documentation](https://github.com/A13Xg/App-Documentation) repo now holds only redirects to the pages here. Once no live store listing uses those links, archive it.
+Magnet Swarm v1.0 shipped with `https://a13xg.github.io/App-Documentation/...` links. Those paths are served by the redirect stubs in `App-Documentation/`, which point to the pages here. The old A13Xg/App-Documentation repo has been deleted. Remove `App-Documentation/` once no live store listing uses those links.
